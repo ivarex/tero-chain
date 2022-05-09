@@ -1,6 +1,6 @@
 # ![logo.svg](./logo.svg)
 
-IVAREX chain is an Ethereum-based blockchain fork from [GoQuorum](https://github.com/ConsenSys/quorum) and merged with [REI](https://github.com/reichain/rei).
+Ivar chain is an Ethereum-based blockchain fork from [GoQuorum](https://github.com/ConsenSys/quorum) and merged with [REI](https://github.com/reichain/rei).
 
 ## License
 
