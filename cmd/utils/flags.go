@@ -148,11 +148,11 @@ var (
 	}
 	MainnetFlag = cli.BoolFlag{
 		Name:  "mainnet",
-		Usage: "Rei Mainnet network",
+		Usage: "Ivar Mainnet network",
 	}
 	TestnetFlag = cli.BoolFlag{
 		Name:  "testnet",
-		Usage: "Rei Testnet network",
+		Usage: "Ivar Testnet network",
 	}
 	NetworkIdFlag = cli.Uint64Flag{
 		Name:  "networkid",
@@ -1653,15 +1653,17 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *ethconfig.Config) {
 	switch {
 	case ctx.GlobalBool(MainnetFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 55555
+			cfg.NetworkId = 88888
 		}
-		cfg.Genesis = core.DefaultReiMainnetGenesisBlock()
+
+		cfg.Genesis = core.DefaultIvarMainnetGenesisBlock()
 		// SetDNSDiscoveryDefaults(cfg, params.ReiMainnetGenesisHash)
 	case ctx.GlobalBool(TestnetFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 55556
+			cfg.NetworkId = 16888
 		}
-		cfg.Genesis = core.DefaultReiTestnetGenesisBlock()
+
+		cfg.Genesis = core.DefaultIvarTestnetGenesisBlock()
 		// SetDNSDiscoveryDefaults(cfg, params.ReiTestnetGenesisHash)
 		// case ctx.GlobalBool(DeveloperFlag.Name):
 		// 	if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
@@ -1893,9 +1895,9 @@ func MakeGenesis(ctx *cli.Context) *core.Genesis {
 	var genesis *core.Genesis
 	switch {
 	case ctx.GlobalBool(MainnetFlag.Name):
-		genesis = core.DefaultReiMainnetGenesisBlock()
+		genesis = core.DefaultIvarMainnetGenesisBlock()
 	case ctx.GlobalBool(TestnetFlag.Name):
-		genesis = core.DefaultReiTestnetGenesisBlock()
+		genesis = core.DefaultIvarTestnetGenesisBlock()
 		// case ctx.GlobalBool(DeveloperFlag.Name):
 		// 	Fatalf("Developer chains are ephemeral")
 	}

@@ -30,9 +30,9 @@ const (
 	QuorumVersionMinor = 1
 	QuorumVersionPatch = 0
 
-	ReiVersionMajor = 0
-	ReiVersionMinor = 0
-	ReiVersionPatch = 7
+	IvarVersionMajor = 0
+	IvarVersionMinor = 0
+	IvarVersionPatch = 7
 )
 
 // Version holds the textual version string.
@@ -54,8 +54,8 @@ var QuorumVersion = func() string {
 	return fmt.Sprintf("%d.%d.%d", QuorumVersionMajor, QuorumVersionMinor, QuorumVersionPatch)
 }()
 
-var ReiVersion = func() string {
-	return fmt.Sprintf("%d.%d.%d", ReiVersionMajor, ReiVersionMinor, ReiVersionPatch)
+var IvarVersion = func() string {
+	return fmt.Sprintf("%d.%d.%d", IvarVersionMajor, IvarVersionMinor, IvarVersionPatch)
 }()
 
 // ArchiveVersion holds the textual version string used for Geth archives.
@@ -81,7 +81,7 @@ func VersionWithCommit(gitCommit, gitDate string) string {
 		vsn += "-" + gitDate
 	}
 
-	vsn += "(rei-v" + ReiVersion + ")"
+	vsn += "(ivar-v" + IvarVersion + ")"
 
 	return vsn
 }

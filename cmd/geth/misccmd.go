@@ -144,7 +144,7 @@ func version(ctx *cli.Context) error {
 		fmt.Println("Git Commit Date:", gitDate)
 	}
 	fmt.Println("Quorum Version:", params.QuorumVersion)
-	fmt.Println("Rei Version:", params.ReiVersion)
+	fmt.Println("Ivar Version:", params.IvarVersion)
 	fmt.Println("Architecture:", runtime.GOARCH)
 	fmt.Println("Network Id:", ethconfig.Defaults.NetworkId)
 	fmt.Println("Go Version:", runtime.Version())
