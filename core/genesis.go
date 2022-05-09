@@ -437,15 +437,15 @@ func DeveloperGenesisBlock(period uint64, faucet common.Address) *Genesis {
 	}
 }
 
-func DefaultReiMainnetGenesisBlock() *Genesis {
+func DefaultIvarMainnetGenesisBlock() *Genesis {
 	return &Genesis{
 		Alloc: GenesisAlloc{
-			common.HexToAddress("0x770b89601B08521d8b6E0DEF22dFAEA8c6025AC7"): {
-				Balance: hexutil.MustDecodeBig("0x52b7d2dcc80cd2e4000000"),
+			common.HexToAddress("0xE0593B3B87739E0337a5EF301087af9b812df3E6"): {
+				Balance: hexutil.MustDecodeBig("100000000000000000000000000000"),
 			},
 		},
 		Config: &params.ChainConfig{
-			ChainID:             big.NewInt(55555),
+			ChainID:             big.NewInt(88888),
 			HomesteadBlock:      big.NewInt(0),
 			ByzantiumBlock:      big.NewInt(0),
 			ConstantinopleBlock: big.NewInt(0),
@@ -465,15 +465,15 @@ func DefaultReiMainnetGenesisBlock() *Genesis {
 	}
 }
 
-func DefaultReiTestnetGenesisBlock() *Genesis {
+func DefaultIvarTestnetGenesisBlock() *Genesis {
 	return &Genesis{
 		Alloc: GenesisAlloc{
-			common.HexToAddress("0xB3D3378B3C6e533529aAFed535F0CDdbC859b207"): {
-				Balance: hexutil.MustDecodeBig("0x52b7d2dcc80cd2e4000000"),
+			common.HexToAddress("0x40Af348b8CCE15f97Ddec5848b18Ed752b362674"): {
+				Balance: hexutil.MustDecodeBig("100000000000000000000000000000"),
 			},
 		},
 		Config: &params.ChainConfig{
-			ChainID:             big.NewInt(55556),
+			ChainID:             big.NewInt(16888),
 			HomesteadBlock:      big.NewInt(0),
 			ByzantiumBlock:      big.NewInt(0),
 			ConstantinopleBlock: big.NewInt(0),

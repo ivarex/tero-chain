@@ -1628,14 +1628,14 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *ethconfig.Config) {
 	switch {
 	case ctx.GlobalBool(MainnetFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 55555
+			cfg.NetworkId = 88888
 		}
-		cfg.Genesis = core.DefaultReiMainnetGenesisBlock()
+		cfg.Genesis = core.DefaultIvarMainnetGenesisBlock()
 	case ctx.GlobalBool(TestnetFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 55556
+			cfg.NetworkId = 16888
 		}
-		cfg.Genesis = core.DefaultReiTestnetGenesisBlock()
+		cfg.Genesis = core.DefaultIvarTestnetGenesisBlock()
 
 		// case ctx.GlobalBool(DeveloperFlag.Name):
 		// 	if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
@@ -1866,9 +1866,9 @@ func MakeGenesis(ctx *cli.Context) *core.Genesis {
 	var genesis *core.Genesis
 	switch {
 	case ctx.GlobalBool(MainnetFlag.Name):
-		genesis = core.DefaultReiMainnetGenesisBlock()
+		genesis = core.DefaultIvarMainnetGenesisBlock()
 	case ctx.GlobalBool(TestnetFlag.Name):
-		genesis = core.DefaultReiTestnetGenesisBlock()
+		genesis = core.DefaultIvarTestnetGenesisBlock()
 		// case ctx.GlobalBool(DeveloperFlag.Name):
 		// 	Fatalf("Developer chains are ephemeral")
 	}

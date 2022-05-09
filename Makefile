@@ -12,6 +12,10 @@ GOBIN = ./build/bin
 GO ?= latest
 GORUN = env GO111MODULE=on go run
 
+ivar:
+	$(GORUN) build/ci.go install ./cmd/geth
+	cp $(GOBIN)/geth $(GOPATH)/bin/ivar
+
 rei:
 	$(GORUN) build/ci.go install ./cmd/geth
 	cp $(GOBIN)/geth $(GOPATH)/bin/rei
