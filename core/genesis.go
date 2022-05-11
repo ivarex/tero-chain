@@ -443,7 +443,7 @@ func DeveloperGenesisBlock(period uint64, faucet common.Address) *Genesis {
 func DefaultIvarMainnetGenesisBlock() *Genesis {
 	return &Genesis{
 		Alloc: GenesisAlloc{
-			common.HexToAddress("0xE0593B3B87739E0337a5EF301087af9b812df3E6"): {
+			common.HexToAddress("0xB6BF0A2047F7e2dF58f065d72e751033cfBCbd49"): {
 				Balance: hexutil.MustDecodeBig("0x204fce5e3e25026110000000"),
 			},
 		},
