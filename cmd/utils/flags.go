@@ -1219,9 +1219,9 @@ func SetP2PConfig(ctx *cli.Context, cfg *p2p.Config) {
 
 	if !ctx.GlobalIsSet(RaftModeFlag.Name) && len(cfg.StaticNodes) == 0 {
 		if ctx.GlobalIsSet(MainnetFlag.Name) {
-			setReiMainnetDefaultPeers(ctx, cfg)
+			setIvarMainnetDefaultPeers(ctx, cfg)
 		} else if ctx.GlobalIsSet(TestnetFlag.Name) {
-			setReiTestnetDefaultPeers(ctx, cfg)
+			setIvarTestnetDefaultPeers(ctx, cfg)
 		}
 	}
 }
@@ -2022,13 +2022,13 @@ func MigrateFlags(action func(ctx *cli.Context) error) func(*cli.Context) error 
 	}
 }
 
-func setReiMainnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
+func setIvarMainnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
 	cfg.StaticNodes = append(cfg.StaticNodes,
-		enode.MustParse("enode://c0b1b09cf64be2a8d2fb18c2f7d02031915769cc00ef1dc3298834527f5ad2b03c0dce1a439617f8afdfe0c005e5d13f46eeb24c1779eb2a85e87bf49d872e6b@34.124.237.65:30303"),
+		enode.MustParse("enode://9d7a80d0e452d60dd7aed71bbb8cf6659a08dacd10871b5bc3751cd27f245809489980fd20fd080ea0de599b0fa30eb3ea2606d4f97e54e2a1351a83edb375da@159.223.51.213:30000"),
 	)
 }
 
-func setReiTestnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
+func setIvarTestnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
 	cfg.StaticNodes = append(cfg.StaticNodes,
 		enode.MustParse("enode://8fece8dfa7a32bf50b0d8136c1d6b18e0547721a33e270696762c7df125c0532f60b64c049122e4aa351410e2ee4e449b76dedf679078fd81bfad3e64145a7e5@34.87.147.60:30303"),
 	)
