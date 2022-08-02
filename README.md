@@ -31,6 +31,7 @@ buildctl build \
 
 ```shell
 mkdir ivar-chain
+cd ivar-chain
 git clone https://github.com/ivarex/chain.git .
 make ivar
 ```
