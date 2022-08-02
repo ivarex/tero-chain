@@ -2030,6 +2030,6 @@ func setIvarMainnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
 
 func setIvarTestnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
 	cfg.StaticNodes = append(cfg.StaticNodes,
-		enode.MustParse("enode://8fece8dfa7a32bf50b0d8136c1d6b18e0547721a33e270696762c7df125c0532f60b64c049122e4aa351410e2ee4e449b76dedf679078fd81bfad3e64145a7e5@34.87.147.60:30303"),
+		enode.MustParse("enode://b568b90ded8e789d9913e4d7ab0d2f8539716bd4265e3c80898232de9fefe2825e768506262ac5d09a2cf52969e4855fc6d65bfe2adea0a09dccd5f490e3220d@128.199.117.55:30000"),
 	)
 }
