@@ -2,6 +2,53 @@
 
 Ivar chain is an Ethereum-based blockchain fork from [GoQuorum](https://github.com/ConsenSys/quorum) and merged with [REI](https://github.com/reichain/rei).
 
+Key differences from GoQuorum:
+
+- Re-enable gas price
+- Always use Raft consensus
+- Change block timestamp unit from nano-second back to second
+- Remove block rewards
+- Miner receives gas fee from mined transactions
+- Hard-coded block difficulty to 1
+- Disable private transactions and contracts
+- Support p2p for broadcast blocks to public nodes
+
+## Network
+
+![network.png](./docs/network.png)
+
+## Docker
+
+```shell
+buildctl build \
+    --frontend dockerfile.v0 \
+    --local dockerfile=. \
+    --local context=. \
+    --output type=image,name=${IMAGE},push=true
+```
+
+## Install
+
+```shell
+mkdir ivar-chain
+git clone https://github.com/ivarex/chain.git .
+make ivar
+```
+
+## Run RPC Node
+
+### Mainnet
+
+```shell
+ivar --datadir ~/.ivar/mainnet --mainnet --http
+```
+
+### Testnet
+
+```shell
+ivar --datadir ~/.ivar/testnet --testnet --http
+```
+
 ## License
 
 The go-ethereum library (i.e. all code outside of the `cmd` directory) is licensed under the
