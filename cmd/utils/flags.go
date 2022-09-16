@@ -1653,14 +1653,14 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *ethconfig.Config) {
 	switch {
 	case ctx.GlobalBool(MainnetFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 88888
+			cfg.NetworkId = 456
 		}
 
 		cfg.Genesis = core.DefaultTeroMainnetGenesisBlock()
 		// SetDNSDiscoveryDefaults(cfg, params.ReiMainnetGenesisHash)
 	case ctx.GlobalBool(TestnetFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
-			cfg.NetworkId = 16888
+			cfg.NetworkId = 16889
 		}
 
 		cfg.Genesis = core.DefaultTeroTestnetGenesisBlock()
