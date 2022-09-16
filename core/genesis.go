@@ -503,7 +503,7 @@ func DefaultTeroTestnetGenesisBlock() *Genesis {
 			},
 		},
 		Config: &params.ChainConfig{
-			ChainID:             big.NewInt(16888),
+			ChainID:             big.NewInt(16889),
 			HomesteadBlock:      big.NewInt(0),
 			ByzantiumBlock:      big.NewInt(0),
 			ConstantinopleBlock: big.NewInt(0),

@@ -32,7 +32,7 @@ const (
 
 	TeroVersionMajor = 0
 	TeroVersionMinor = 0
-	IeroVersionPatch = 7
+	TeroVersionPatch = 7
 )
 
 // Version holds the textual version string.
@@ -54,8 +54,8 @@ var QuorumVersion = func() string {
 	return fmt.Sprintf("%d.%d.%d", QuorumVersionMajor, QuorumVersionMinor, QuorumVersionPatch)
 }()
 
-var IvarVersion = func() string {
-	return fmt.Sprintf("%d.%d.%d", IvarVersionMajor, IvarVersionMinor, IvarVersionPatch)
+var TeroVersion = func() string {
+	return fmt.Sprintf("%d.%d.%d", TeroVersionMajor, TeroVersionMinor, TeroVersionPatch)
 }()
 
 // ArchiveVersion holds the textual version string used for Geth archives.
@@ -81,7 +81,7 @@ func VersionWithCommit(gitCommit, gitDate string) string {
 		vsn += "-" + gitDate
 	}
 
-	vsn += "(ivar-v" + IvarVersion + ")"
+	vsn += "(tero-v" + TeroVersion + ")"
 
 	return vsn
 }
