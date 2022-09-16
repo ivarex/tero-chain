@@ -475,7 +475,7 @@ func DefaultTeroMainnetGenesisBlock() *Genesis {
 			},
 		},
 		Config: &params.ChainConfig{
-			ChainID:             big.NewInt(465),
+			ChainID:             big.NewInt(456),
 			HomesteadBlock:      big.NewInt(0),
 			ByzantiumBlock:      big.NewInt(0),
 			ConstantinopleBlock: big.NewInt(0),
