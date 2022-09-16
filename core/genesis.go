@@ -440,15 +440,42 @@ func DeveloperGenesisBlock(period uint64, faucet common.Address) *Genesis {
 	}
 }
 
-func DefaultIvarMainnetGenesisBlock() *Genesis {
+func DefaultTeroMainnetGenesisBlock() *Genesis {
 	return &Genesis{
 		Alloc: GenesisAlloc{
-			common.HexToAddress("0xB6BF0A2047F7e2dF58f065d72e751033cfBCbd49"): {
-				Balance: hexutil.MustDecodeBig("0x204fce5e3e25026110000000"),
+			common.HexToAddress("0xBB842b9C696391CC6A49C4f059F005f49Ff785C4"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0x359426f499e7Bc26B522c78f2CbA23553d74655D"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0x2dc264A9e3b75ca42B489Ef8b460005f955FeFcA"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0x74F2B03E2824Ab698c861948116592B87053605B"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0x46a2ed556E2d27Ff11899a059747914B36F07602"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0x8ea2cCbDa220700A67E58835AcD893c1Aa504b96"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0xa9b2C9e3f6915A2deC2Af3FE280E3732B79C0e2a"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0x4765A9b2Aa7985ed88dD3DdbE89623F8D4658912"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0x1776ac8d9b7963AAb6C1F7F622D016C17bDE7EF6"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
+			},
+			common.HexToAddress("0x21cA317A091F4baf43f4E5aC8048AaD3a2D15491"): {
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
 			},
 		},
 		Config: &params.ChainConfig{
-			ChainID:             big.NewInt(88888),
+			ChainID:             big.NewInt(465),
 			HomesteadBlock:      big.NewInt(0),
 			ByzantiumBlock:      big.NewInt(0),
 			ConstantinopleBlock: big.NewInt(0),
@@ -468,11 +495,11 @@ func DefaultIvarMainnetGenesisBlock() *Genesis {
 	}
 }
 
-func DefaultIvarTestnetGenesisBlock() *Genesis {
+func DefaultTeroTestnetGenesisBlock() *Genesis {
 	return &Genesis{
 		Alloc: GenesisAlloc{
 			common.HexToAddress("0x40Af348b8CCE15f97Ddec5848b18Ed752b362674"): {
-				Balance: hexutil.MustDecodeBig("0x204fce5e3e25026110000000"),
+				Balance: hexutil.MustDecodeBig("0x1431e0fae6d7217caa0000000"),
 			},
 		},
 		Config: &params.ChainConfig{

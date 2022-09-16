@@ -30,9 +30,9 @@ const (
 	QuorumVersionMinor = 1
 	QuorumVersionPatch = 0
 
-	IvarVersionMajor = 0
-	IvarVersionMinor = 0
-	IvarVersionPatch = 7
+	TeroVersionMajor = 0
+	TeroVersionMinor = 0
+	IeroVersionPatch = 7
 )
 
 // Version holds the textual version string.

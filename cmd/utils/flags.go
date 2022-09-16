@@ -148,11 +148,11 @@ var (
 	}
 	MainnetFlag = cli.BoolFlag{
 		Name:  "mainnet",
-		Usage: "Ivar Mainnet network",
+		Usage: "Tero Mainnet network",
 	}
 	TestnetFlag = cli.BoolFlag{
 		Name:  "testnet",
-		Usage: "Ivar Testnet network",
+		Usage: "Tero Testnet network",
 	}
 	NetworkIdFlag = cli.Uint64Flag{
 		Name:  "networkid",
@@ -1219,9 +1219,9 @@ func SetP2PConfig(ctx *cli.Context, cfg *p2p.Config) {
 
 	if !ctx.GlobalIsSet(RaftModeFlag.Name) && len(cfg.StaticNodes) == 0 {
 		if ctx.GlobalIsSet(MainnetFlag.Name) {
-			setIvarMainnetDefaultPeers(ctx, cfg)
+			setTeroMainnetDefaultPeers(ctx, cfg)
 		} else if ctx.GlobalIsSet(TestnetFlag.Name) {
-			setIvarTestnetDefaultPeers(ctx, cfg)
+			setTeroTestnetDefaultPeers(ctx, cfg)
 		}
 	}
 }
@@ -1656,14 +1656,14 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *ethconfig.Config) {
 			cfg.NetworkId = 88888
 		}
 
-		cfg.Genesis = core.DefaultIvarMainnetGenesisBlock()
+		cfg.Genesis = core.DefaultTeroMainnetGenesisBlock()
 		// SetDNSDiscoveryDefaults(cfg, params.ReiMainnetGenesisHash)
 	case ctx.GlobalBool(TestnetFlag.Name):
 		if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
 			cfg.NetworkId = 16888
 		}
 
-		cfg.Genesis = core.DefaultIvarTestnetGenesisBlock()
+		cfg.Genesis = core.DefaultTeroTestnetGenesisBlock()
 		// SetDNSDiscoveryDefaults(cfg, params.ReiTestnetGenesisHash)
 		// case ctx.GlobalBool(DeveloperFlag.Name):
 		// 	if !ctx.GlobalIsSet(NetworkIdFlag.Name) {
@@ -1895,9 +1895,9 @@ func MakeGenesis(ctx *cli.Context) *core.Genesis {
 	var genesis *core.Genesis
 	switch {
 	case ctx.GlobalBool(MainnetFlag.Name):
-		genesis = core.DefaultIvarMainnetGenesisBlock()
+		genesis = core.DefaultTeroMainnetGenesisBlock()
 	case ctx.GlobalBool(TestnetFlag.Name):
-		genesis = core.DefaultIvarTestnetGenesisBlock()
+		genesis = core.DefaultTeroTestnetGenesisBlock()
 		// case ctx.GlobalBool(DeveloperFlag.Name):
 		// 	Fatalf("Developer chains are ephemeral")
 	}
@@ -2022,14 +2022,14 @@ func MigrateFlags(action func(ctx *cli.Context) error) func(*cli.Context) error 
 	}
 }
 
-func setIvarMainnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
+func setTeroMainnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
 	cfg.StaticNodes = append(cfg.StaticNodes,
-		enode.MustParse("enode://9d7a80d0e452d60dd7aed71bbb8cf6659a08dacd10871b5bc3751cd27f245809489980fd20fd080ea0de599b0fa30eb3ea2606d4f97e54e2a1351a83edb375da@159.223.51.213:30000"),
+		enode.MustParse("enode://"),
 	)
 }
 
-func setIvarTestnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
+func setTeroTestnetDefaultPeers(ctx *cli.Context, cfg *p2p.Config) {
 	cfg.StaticNodes = append(cfg.StaticNodes,
-		enode.MustParse("enode://b568b90ded8e789d9913e4d7ab0d2f8539716bd4265e3c80898232de9fefe2825e768506262ac5d09a2cf52969e4855fc6d65bfe2adea0a09dccd5f490e3220d@128.199.117.55:30000"),
+		enode.MustParse("enode://"),
 	)
 }
